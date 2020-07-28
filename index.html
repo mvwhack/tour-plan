@@ -9,21 +9,21 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="navbar">
+    <header class="navbar navbar__mobile--fixed">
         <div class="container">
             <div class="navbar-top">
                 <a href="#" class="logo">
                     <img src="img/horizontal-logo.svg" alt="Logo: Best Tour Plan" class="logo__img">
                 </a>
 
-                <form action="#" class="search navbar__search">
+                <form action="#" class="search navbar__search navbar__search--mobile--hidden">
                     <input type="text" class="search__input" placeholder="Search Location">
                     <button class="search__button">
                         <img src="img/search.svg" alt="Icon: Search">
                     </button>
                 </form>
 
-                <a href="#" class="user navbar__user">
+                <a href="#" class="user navbar__user navbar__user--mobile--hidden">
                     <img src="img/user-avatar.jpg" alt="Avatar: Nathan" class="user__avatar">
                     <span class="user__name">Nathan</span>
                 </a>
@@ -40,6 +40,20 @@
         <div class="navbar-bottom">
             <div class="container">
                 <ul class="navbar-menu">
+                    <li class="navbar-menu__item navbar-menu__item--mobile--visible">
+                        <a href="#" class="user navbar__user navbar__user--mobile--visible">
+                            <img src="img/user-avatar.jpg" alt="Avatar: Nathan" class="user__avatar">
+                            <span class="user__name user__name--light">Nathan</span>
+                        </a>
+                    </li>
+                    <li class="navbar-menu__item navbar-menu__item--mobile--visible">
+                        <form action="#" class="search navbar__search navbar__search--mobile--visible">
+                            <input type="text" class="search__input" placeholder="Search Location">
+                            <button class="search__button">
+                                <img src="img/search.svg" alt="Icon: Search">
+                            </button>
+                        </form>
+                    </li>
                     <li class="navbar-menu__item">
                         <a href="#" class="navbar-menu__link">All Deals</a>
                     </li>
@@ -203,15 +217,15 @@
                         </p>
                         <div class="other-grid__location">
                             <span class="other-grid__adress">
-                                <img src="img/map-pin.svg" alt="Icon: adress" class="other-grid__adress--image">
+                                <img src="img/map-pin.svg" alt="Icon: adress" class="other-grid__icon">
                                 1749 Wheeler Ridge  Delaware
                             </span>
                             <span class="other-grid__guests">
-                                <img src="img/user.svg" alt="Icon: guests" class="other-grid__adress--image">
+                                <img src="img/user.svg" alt="Icon: guests" class="other-grid__icon">
                                 2 x Guests
                             </span>
                             <span class="other-grid__room">
-                                <img src="img/home.svg" alt="Icon: room" class="other-grid__adress--image">
+                                <img src="img/home.svg" alt="Icon: room" class="other-grid__icon">
                                 1 x Room
                             </span>
                         </div>
