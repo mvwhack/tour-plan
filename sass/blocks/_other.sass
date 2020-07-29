@@ -9,12 +9,14 @@
         text-align: center
         text-transform: uppercase
         color: $text-color
+        margin-top: 0
         margin-bottom: 65px
     &-grid
         display: grid
         grid-template-columns: repeat(3, minmax(min-content, 1fr))
         grid-gap: 30px
         &__item
+            position: relative
             background-color: $bg-dark
             border-radius: 0px 0px 8px 8px
             &--one
@@ -22,6 +24,10 @@
                 display: flex
                 flex-direction: row
                 border-radius: 0px 8px 8px 0px
+        &__offer
+            position: absolute
+            top: 26px
+            left: 0
         &__description
             color: $text-menu-color
             padding: 30px 21px 25px 32px

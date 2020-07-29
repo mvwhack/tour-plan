@@ -822,6 +822,7 @@ template {
   text-align: center;
   text-transform: uppercase;
   color: #333333;
+  margin-top: 0;
   margin-bottom: 65px;
 }
 
@@ -835,6 +836,7 @@ template {
 }
 
 .other-grid__item {
+  position: relative;
   background-color: #0A223D;
   border-radius: 0px 0px 8px 8px;
 }
@@ -851,6 +853,12 @@ template {
       -ms-flex-direction: row;
           flex-direction: row;
   border-radius: 0px 8px 8px 0px;
+}
+
+.other-grid__offer {
+  position: absolute;
+  top: 26px;
+  left: 0;
 }
 
 .other-grid__description {
@@ -1551,6 +1559,36 @@ template {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
+  .other-grid {
+    -ms-grid-columns: (minmax(min-content, 1fr))[4];
+        grid-template-columns: repeat(4, minmax(-webkit-min-content, 1fr));
+        grid-template-columns: repeat(4, minmax(min-content, 1fr));
+    grid-gap: 10px;
+  }
+  .other-grid__item--one {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+  }
+  .other-grid__description {
+    padding: 20px 15px;
+  }
+  .other-grid__image--one {
+    height: 400px;
+    width: auto;
+  }
+  .other-grid__order--chld {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .other-grid__price--chld {
+    margin-bottom: 10px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -1593,6 +1631,42 @@ template {
   }
   .hotel-slider {
     width: 100%;
+  }
+  .other-grid__image--one {
+    height: 445px;
+    width: auto;
+  }
+  .other-grid__item--two {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+  }
+  .other-grid__item--three {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-column: 3 / 5;
+  }
+  .other-grid__item--four {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+  }
+  .other-grid__item--five {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-column: 3 / 5;
+  }
+  .other-grid__order--chld {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .other-grid__price--chld {
+    margin-bottom: 0;
   }
   .booking, .map {
     width: 340px;
@@ -1812,6 +1886,37 @@ template {
   .map {
     width: 100%;
   }
+  .other-grid__image--one {
+    height: 380px;
+    width: auto;
+  }
+  .other-grid__description {
+    padding: 15px 10px;
+  }
+  .other-grid__description--one {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 10px 10px;
+  }
+  .other-grid__title--one {
+    margin-bottom: 10px;
+  }
+  .other-grid__text {
+    font-size: 12px;
+    margin-top: 0;
+    margin-bottom: 22px;
+  }
+  .other-grid__location--one {
+    margin-bottom: 5px;
+  }
   .newsletter {
     padding: 76px 0 83px 0;
   }
@@ -1880,6 +1985,20 @@ template {
   }
   .hotel__slider {
     margin-bottom: 20px;
+  }
+  .other-grid__image--one {
+    height: 250px;
+    width: auto;
+  }
+  .other-grid__description--one {
+    width: 100%;
+  }
+  .other-grid__text {
+    display: none;
+  }
+  .other-grid__button {
+    padding: 11px 24px;
+    font-size: 12px;
   }
   .newsletter {
     padding: 67px 0 80px 0;
@@ -1973,6 +2092,58 @@ template {
 @media (min-width: 320px) and (max-width: 450px) {
   .hotel-slider {
     height: 210px;
+  }
+  .other {
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+  .other__title {
+    font-size: 30px;
+    margin-bottom: 45px;
+  }
+  .other-grid {
+    -ms-grid-columns: (minmax(min-content, 1fr))[1];
+        grid-template-columns: repeat(1, minmax(-webkit-min-content, 1fr));
+        grid-template-columns: repeat(1, minmax(min-content, 1fr));
+  }
+  .other-grid__image {
+    height: 285px;
+    width: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .other-grid__item--one {
+    grid-column: span 1;
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-radius: 0px 0px 8px 8px;
+  }
+  .other-grid__item--two {
+    grid-column: span 1;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .other-grid__item--three {
+    grid-column: span 1;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+  .other-grid__item--four {
+    grid-column: span 1;
+    -ms-grid-row: 4;
+    grid-row: 4;
+  }
+  .other-grid__item--five {
+    grid-column: span 1;
+    -ms-grid-row: 5;
+    grid-row: 5;
+  }
+  .other-grid__description {
+    padding: 15px;
   }
   .newsletter {
     padding: 67px 0 75px 0;
