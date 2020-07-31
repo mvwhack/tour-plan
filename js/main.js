@@ -57,8 +57,12 @@ $(document).ready(function () {
 
   $(this).keydown(function(eventObject){
     if (eventObject.which == 27)
-      $(".modal__overlay--visible").removeClass("modal__overlay--visible");
-      $(".modal__dialog--visible").removeClass("modal__dialog--visible");
+    closeModal(event);
   });
+
+  // Клик по фону, но не по окну.
+	$('.modal__overlay').click(function(e) {
+		closeModal(event);
+	});
 
 });
