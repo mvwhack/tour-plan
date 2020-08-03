@@ -74,7 +74,10 @@ $(document).ready(function () {
           required: "Please specify your name",
           minlength: "The name must be at least 2 letters long"
         },
-        phone: "Please specify your phone number",
+        phone: {
+          required: "Please specify your phone number",
+          minlength: "Enter your phone number in the format +7 (999) 999-99-99"
+        },
         email: {
           required: "We need your email address to contact you",
           email: "Your email address must be in the format of name@domain.com"
@@ -83,8 +86,6 @@ $(document).ready(function () {
     });
   });
 
-  $(document).ready(function(){
-    $('.phone_us').mask('+7(999) 999-99-99');
-  });
-  
+  $('.phone_us').mask('+7(999) 999-99-99');
+
 });
