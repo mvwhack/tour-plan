@@ -1,5 +1,6 @@
 .newsletter
     position: relative
+    height: 276px
     padding: 98px 0 87px 0
     background-repeat: no-repeat
     background-position: center
@@ -40,15 +41,16 @@
             text-transform: uppercase
 
 .subscribe
-    position: relative
+    display: flex
+    flex-direction: row-reverse
     width: 350px
-    height: 55px
-    border-radius: 4px
     overflow: hidden
+    &-block
+        position: relative
     &__input
-        position: absolute
-        width: 100%
-        height: 100%
+        top: 0
+        width: 285px
+        height: 55px
         border: none
         padding-left: 33px
         padding-right: 75px
@@ -56,13 +58,15 @@
         font-weight: 300
         font-size: 14px
         line-height: 18px
+        border-radius: 4px 0 0 4px
+        outline: none
     &__button
-        position: absolute
         right: 0
         top: 0
-        height: 100%
+        height: 55px
         min-width: 65px
         border: none
+        border-radius: 0 4px 4px 0
         background-color: $primary
         color: $text-menu-color
         cursor: pointer
