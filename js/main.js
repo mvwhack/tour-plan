@@ -69,9 +69,9 @@ $(document).ready(function () {
   $('.phone_us').mask('+7(999) 999-99-99');
 
   //Обработка форм
-  $(".form").each(function () {
+  $(".form").each(function (validate) {
     $(this).validate({
-      errorClass: "invalid",
+      errorClass: "invalid animate__animated animate__shakeX",
       messages: {
         name: {
           required: "Please specify your name",
@@ -88,7 +88,11 @@ $(document).ready(function () {
       }
     });
   });
-
+  $('[name=name]').bind("change keyup input click", function() {
+    if (this.value.match(/[^а-яА-Яa-zA-Z\s]/g)) {
+    this.value = this.value.replace(/[^а-яА-Яa-zA-Z\s]/g, '');
+    }
+  });
   AOS.init();
-  
+
 });
