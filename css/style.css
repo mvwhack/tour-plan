@@ -67,6 +67,18 @@ img {
   cursor: pointer;
 }
 
+.card__button, .other-grid__button {
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.card__button:hover, .other-grid__button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .invalid {
   color: #EC1F46;
 }

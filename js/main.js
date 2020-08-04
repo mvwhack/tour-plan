@@ -65,6 +65,9 @@ $(document).ready(function () {
 		closeModal(event);
 	});
 
+  //Добавление маски форме телефона
+  $('.phone_us').mask('+7(999) 999-99-99');
+
   //Обработка форм
   $(".form").each(function () {
     $(this).validate({
@@ -86,6 +89,6 @@ $(document).ready(function () {
     });
   });
 
-  $('.phone_us').mask('+7(999) 999-99-99');
-
+  AOS.init();
+  
 });
