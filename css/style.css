@@ -516,6 +516,7 @@ template {
   right: 0;
   border: none;
   background-color: #EC1F46;
+  cursor: pointer;
 }
 
 .user {
@@ -1452,6 +1453,16 @@ template {
 
 .footer__contact-form--mb-75 {
   margin-bottom: 75px;
+}
+
+.footer__contact-phone {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.footer__contact-link {
+  text-decoration: none;
+  color: inherit;
 }
 
 .footer__bottom {
