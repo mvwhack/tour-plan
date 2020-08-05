@@ -139,7 +139,7 @@
                 grid-row: 4
         &__bottom
             grid-column: span 6
-    
+
 @media (max-width: 768px)
     body
         padding-top: 78px
@@ -455,3 +455,29 @@
         padding: 20px 20px
     .button 
         min-width: 140px
+
+@media (orientation: landscape)
+    .scroll
+        &-hidden
+            overflow: hidden
+    .navbar
+        &-bottom
+            &__visible
+                overflow-y: scroll
+    .modal
+        &__dialog 
+            width: 470px
+            height: 300px
+            padding: 10px 35px
+            overflow-y: scroll
+        &__title
+            margin-bottom: 0
+        &__message
+            min-height: 60px
+    .message
+        height: 60px
+
+@media (orientation: portrait)
+    .scroll
+        &-hidden
+            overflow: hidden

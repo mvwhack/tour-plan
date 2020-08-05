@@ -34,8 +34,8 @@ $(document).ready(function () {
   var menuButton = $(".menu-button");
   menuButton.on('click', function() {
     $(".navbar-bottom").toggleClass('navbar-bottom__visible');
+    $("body").toggleClass("scroll-hidden");
   });
-
   
   var modalButton = $("[data-toggle=modal]");
   var closeModalButton = $(".modal__close");
@@ -45,18 +45,22 @@ $(document).ready(function () {
   function openModal() {
     var modalOverlay = $(".modal__overlay");
     var modalDialog = $(".modal__dialog");
+    var body = $("body");
 
     modalOverlay.addClass("modal__overlay--visible");
     modalDialog.addClass("modal__dialog--visible");
+    body.addClass("scroll-hidden");
   }
 
   function closeModal(event) {
     event.preventDefault();
     var modalOverlay = $(".modal__overlay");
     var modalDialog = $(".modal__dialog");
+    var body = $("body");
 
     modalOverlay.removeClass("modal__overlay--visible");
     modalDialog.removeClass("modal__dialog--visible");
+    body.removeClass("scroll-hidden");
   }
 
   $(this).keydown(function(eventObject){
