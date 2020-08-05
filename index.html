@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best Tour Plan - Hotel Booking</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap" 
+        rel="stylesheet">
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/aos.css">
@@ -148,7 +149,7 @@
                     <button class="hotel-slider__button hotel-slider__button--next"></button>
                 </div>
                 <!-- /.swiper-container -->
-                <div class="hotel-grid__info">
+                <div class="hotel-grid__info" onload="initialize()">
                     <div class="booking">
                         <div class="booking__info">
                             <div class="booking__price">
@@ -184,6 +185,7 @@
                     </div>
                     <!-- /.booking -->
                     <div id="map" class="map">
+                        <img src="img/map-img.png" class="map__image" alt="Google Maps">
                     </div>
                     <!-- /.map -->
                 </div>
@@ -585,7 +587,7 @@
                             </div>
                             <div class="footer__contact-block">
                                 <p class="footer__contact-phone">
-                                    Tel (business hours) : <a href="tel:269 1500" class="footer__contact-link">269 1500</a>
+                                    Tel (business hours) : <a href="tel:269-1500" class="footer__contact-link">269 1500</a>
                                 </p>
                                 <p class="footer__contact-phone">
                                     Tel (hotline) Monday - Saturday: <a href="tel:52-56-61-38" class="footer__contact-link">52-56-61-38</a> (08:00 am – 20:00 pm)
@@ -655,13 +657,12 @@
         <!-- /.modal__dialog -->
     </div>
     <!-- /.modal -->
-    <script src="js/aos.js"></script>
     <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/mapbasics.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=4bd7feb1-22ae-4546-9951-7bb3c7d87288"></script>
-    <script src="js/mapbasics.js"></script>
-    <script src="js/parallax.js"></script>
+    <script src="js/parallax.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>

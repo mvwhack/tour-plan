@@ -93,6 +93,8 @@ $(document).ready(function () {
     this.value = this.value.replace(/[^а-яА-Яa-zA-Z\s]/g, '');
     }
   });
+  
   AOS.init();
+  
 
 });
