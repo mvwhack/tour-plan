@@ -2,6 +2,10 @@ $(document).ready(function () {
     var hotelSlider = new Swiper('.hotel-slider', {
       // Optional parameters
       loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,        
+      },
     
       // Navigation arrows
       navigation: {
