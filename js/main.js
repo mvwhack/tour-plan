@@ -131,7 +131,7 @@ $(document).ready(function () {
   //Отключаем анимацию на экранах меньше 992px
   if (window.innerWidth < 992) {
 
-    document.querySelectorAll('#delete-animations').forEach((elem) => {
+    document.querySelectorAll('.delete-animations').forEach((elem) => {
       elem.removeAttribute("data-aos");
 
     });
