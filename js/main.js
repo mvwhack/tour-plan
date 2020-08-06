@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  
+  // Слайдер в ТОПе сайта
     var hotelSlider = new Swiper('.hotel-slider', {
       // Optional parameters
       loop: true,
@@ -19,6 +21,7 @@ $(document).ready(function () {
         },
   });
 
+  // Слайдер с отзывами
   var reviewsSlider = new Swiper('.reviews-slider', {
     // Optional parameters
     loop: true,
@@ -31,6 +34,8 @@ $(document).ready(function () {
 
   });
 
+  // Функции открытия и закрытия модального окна + блокировка прокрутки фона
+  // при открытом модальном окне
   var menuButton = $(".menu-button");
   menuButton.on('click', function() {
     $(".navbar-bottom").toggleClass('navbar-bottom__visible');
@@ -63,6 +68,7 @@ $(document).ready(function () {
     body.removeClass("scroll-hidden");
   }
 
+  // Закртие модального окна по нажатию на клавиатуре кнопки ESC
   $(this).keydown(function(eventObject){
     if (eventObject.which == 27)
     closeModal(event);
@@ -96,12 +102,25 @@ $(document).ready(function () {
       }
     });
   });
+
+  // Разрешаем ввод в поле name только буквы
   $('[name=name]').bind("change keyup input click", function() {
     if (this.value.match(/[^а-яА-Яa-zA-Z\s]/g)) {
     this.value = this.value.replace(/[^а-яА-Яa-zA-Z\s]/g, '');
     }
   });
   
+  // Подключаем анимацию к сайту
   AOS.init();
 
+  //Отключаем анимацию на экранах меньше 992px
+  if (window.innerWidth < 992) {
+
+    document.querySelectorAll('#delete-animations').forEach((elem) => {
+      elem.removeAttribute("data-aos");
+
+    });
+  
+  }
+  
 });
