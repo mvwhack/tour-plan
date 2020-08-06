@@ -83,8 +83,8 @@ $(document).ready(function () {
   $('.phone_us').mask('+7(999) 999-99-99');
 
   //Обработка форм
-  $(".footer__form").validate({
-      errorLabelContainer: ".footer__span",
+  $(".form").each(function () {
+    $(this).validate({
       errorClass: "invalid animate__animated animate__shakeX",
       messages: {
         name: {
@@ -93,31 +93,17 @@ $(document).ready(function () {
         },
         phone: {
           required: "Please specify your phone number. ",
-          minlength: "Enter your phone number in the format (999) 999-99-99. "
+          minlength: "Enter phone in the format (999) 999-99-99. "
+        },
+        email: {
+          required: "We need your email address to contact you. ",
+          email: "Your email address must be in the format of name@domain.com"
         }
       }
-  });
-
-  $(".modal__form").validate({
-    errorLabelContainer: ".modal__span",
-    errorClass: "invalid animate__animated animate__shakeX",
-    messages: {
-      name: {
-        required: "Please specify your name. ",
-        minlength: "The name must be at least 2 letters long. "
-      },
-      phone: {
-        required: "Please specify your phone number. ",
-        minlength: "Enter your phone number in the format (999) 999-99-99. "
-      },
-      email: {
-        required: "We need your email address to contact you. ",
-        email: "Your email address must be in the format of name@domain.com"
-      }
-    }
+    });
   });
   
-  $('#reset').val('');
+  $('form').find('input').val('');
 
   // Разрешаем ввод в поле name только буквы
   $('[name=name]').bind("change keyup input click", function() {
