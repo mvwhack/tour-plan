@@ -116,7 +116,8 @@ $(document).ready(function () {
       }
     }
   });
-
+  
+  $('#reset').val('');
 
   // Разрешаем ввод в поле name только буквы
   $('[name=name]').bind("change keyup input click", function() {
@@ -138,4 +139,5 @@ $(document).ready(function () {
   
   }
   
+
 });

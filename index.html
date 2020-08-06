@@ -611,7 +611,7 @@
                     <div class="footer__error">
                         <span class="footer__span"></span>
                     </div>
-                    <form action="phpmailer/send.php" method="POST" class="form footer__form">
+                    <form action="phpmailer/send.php" method="POST" class="form footer__form" id="reset">
                         <div class="footer__input-group">
                             <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name" required minlength="2">
                         </div> 
@@ -651,7 +651,7 @@
             <div class="modal__error">
                 <span class="modal__span"></span>
             </div>
-            <form action="phpmailer/send.php" method="POST" class="form modal__form">
+            <form action="phpmailer/send.php" method="POST" class="form modal__form" id="reset">
                 <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" required minlength="2">
                 <label id="input-error"></label>
                 <input type="tel" class="input modal__input phone_us" placeholder="Phone Number*" name="phone" required minlength="17">
