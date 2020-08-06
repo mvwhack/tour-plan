@@ -46,11 +46,16 @@
         height: 100%
         background-color:#F5FAFE
         border: 0
-        font-size: 12px
-        line-height: 15px
-        color: $text-color
+        outline: none
         padding-left: 23px
         padding-right: 75px
+        &::placeholder 
+            color: $footer-text-color
+            font-style: normal
+            font-weight: normal
+            font-size: 12px
+            line-height: 15px
+            opacity: 1
     &__button
         position: absolute
         width: 65px
