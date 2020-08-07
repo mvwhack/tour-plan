@@ -1,6 +1,8 @@
 .hotel
     padding-top: 23px
     padding-bottom: 70px
+    &__mb-2
+            margin-bottom: 20px
     &-info
         display: flex
         align-items: center
@@ -44,7 +46,6 @@
     &-description
         font-size: 12px
         line-height: 15px
-        padding-bottom: 20px
     &-grid
         display: flex
         justify-content: space-between
@@ -96,7 +97,8 @@
                 background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%)
 
 
-.stars 
+.stars
+    display: flex
     flex-basis: 100%
 
 .offer
@@ -125,7 +127,7 @@
     width: 350px
     min-height: 210px
     border-radius: 8px
-    padding: 28px
+    padding: 26px
     background-color: $bg-dark
     color: $text-menu-color
     font-family: Nunito, sans-serif
@@ -193,7 +195,7 @@
         font-style: normal
         font-weight: 600
         font-size: 14px
-        line-height: 19px
+        padding: 0
         width: 100%
         min-height: 45px
         border-radius: 4px

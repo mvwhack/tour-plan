@@ -104,6 +104,7 @@ $(document).ready(function () {
   });
   
   $('form').find('input').val('');
+  $('form').find('textarea').val('');
 
   // Разрешаем ввод в поле name только буквы
   $('[name=name]').bind("change keyup input click", function() {
@@ -125,5 +126,4 @@ $(document).ready(function () {
   
   }
   
-
 });
